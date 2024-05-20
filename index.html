@@ -11,6 +11,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/noscript.css" />
+
+     <style>
+        /* Ensure navigation bar is always displayed */
+        #nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em;
+            background: #333;
+            color: #fff;
+        }
+        #nav ul.links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #nav ul.links li {
+            margin: 0 1em;
+        }
+        #nav ul.icons {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #nav ul.icons li {
+            margin: 0 0.5em;
+        }
+        .image-txt-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            margin: 2em 0;
+        }
+        .image-txt-container img {
+            max-width: 100%;
+            height: auto;
+            margin-right: 20px;
+        }
+        .post.featured ul {
+            list-style-position: inside;
+            padding-left: 40px;
+        }
+        @media (max-width: 768px) {
+            .image-txt-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .image-txt-container img {
+                margin: 0 0 20px 0;
+            }
+        }
+    </style>	 
 	 
 	 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
