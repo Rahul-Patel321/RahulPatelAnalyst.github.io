@@ -5,14 +5,26 @@
     Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-    <head>
-        <title>Make The Data Shine!</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <link rel="stylesheet" href="assets/css/styles.css" />
-        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    </head>
+   <head>
+    <title id="dynamicTitle">Make The Data Shine!</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/noscript.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var titles = ["Make The Data Shine!", "Transforming Data Into Insights!"];
+            var index = 0;
+            setInterval(function(){
+                $('#dynamicTitle').fadeOut(function(){
+                    $(this).text(titles[index]).fadeIn();
+                });
+                index = (index + 1) % titles.length;
+            }, 3000); // Change title every 3 seconds
+        });
+    </script>
+</head>
     <body class="is-preload">
 
         <!-- Wrapper -->
