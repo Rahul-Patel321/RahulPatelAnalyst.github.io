@@ -11,51 +11,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/noscript.css" />
- <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .image-txt-container {
+<style>
+        /* Custom styles to ensure nav menu displays on mobile */
+        #nav ul.links {
             display: flex;
-            flex-direction: row;
             flex-wrap: wrap;
-            align-items: flex-start;
+            justify-content: center;
         }
-        .image-txt-container img {
-            max-width: 100%;
-            height: auto;
-            margin-right: 20px;
+        #nav ul.icons {
+            display: flex;
+            justify-content: center;
         }
-        .image-txt-container article {
-            flex: 1;
-            min-width: 280px;
+        #nav ul li {
+            margin: 10px;
         }
-        ul {
-            list-style-position: inside;
-            padding-left: 20px;
-        }
-        @media (max-width: 767px) {
-            .image-txt-container {
+        @media (max-width: 768px) {
+            #nav ul.links {
                 flex-direction: column;
                 align-items: center;
             }
-            .image-txt-container img {
-                margin-right: 0;
-                margin-bottom: 20px;
-            }
-            nav ul {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 100%;
-            }
-            nav ul li {
-                margin: 10px 0;
-            }
-            nav .icons {
-                display: flex;
+            #nav ul.icons {
+                flex-direction: row;
                 justify-content: center;
-                width: 100%;
             }
         }
     </style>
