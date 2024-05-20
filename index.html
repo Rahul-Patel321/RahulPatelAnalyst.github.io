@@ -11,18 +11,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/noscript.css" />
-    <style>
+     <style>
         body {
             background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
-            background-size cover;
+            background-size: cover;
+            background-attachment: fixed; /* Ensure the background stays fixed while scrolling */
             color: white; /* Text color */
             font-family: Arial, sans-serif; /* Font family for the text */
         }
         #wrapper {
             background-color: rgba(0, 0, 0, 0.5); /* Background overlay color */
+            padding: 100px 0; /* Add padding to the wrapper */
         }
         #intro {
-            padding: 100px 0;
             text-align: center;
         }
         #intro h1 {
@@ -31,7 +32,7 @@
         #intro p {
             font-size: 1.2em;
         }
-    </style>	 
+    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
