@@ -1,80 +1,133 @@
+/* Main CSS */
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     background: #f4f4f4;
-    scroll-behavior: smooth;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2980b9;
 }
 
 header {
     background: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 1rem 0;
     text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
+header .logo {
     color: #fff;
-    text-decoration: none;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-nav #nav-toggle {
-    display: none;
+nav {
     background: #444;
-    color: white;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem 0;
+}
+
+nav a {
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    background: #333;
+}
+
+#intro {
+    background: url('images/background.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#intro h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#intro p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.actions .button {
+    background: #3498db;
+    color: #fff;
+    padding: 0.5rem 1rem;
     border: none;
-    padding: 10px;
     cursor: pointer;
+    text-transform: uppercase;
 }
 
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-        flex-direction: column;
-        background: #333;
-        padding: 0;
-    }
-    nav ul li {
-        display: block;
-        text-align: center;
-        margin: 10px 0;
-    }
-    nav #nav-toggle {
-        display: inline-block;
-    }
+.actions .button:hover {
+    background: #2980b9;
 }
 
-section {
-    padding: 20px;
-    margin: 20px;
+.post {
     background: #fff;
-    border-radius: 5px;
+    margin: 1rem 0;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
+.post h2 a {
     color: #333;
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
+.post .image {
+    margin-top: 1rem;
+}
+
+.contact section {
+    margin: 2rem 0;
+}
+
+.contact h3 {
+    margin-bottom: 0.5rem;
+}
+
+.contact p {
+    margin: 0;
+}
+
+/* Footer */
+#copyright {
     background: #333;
     color: #fff;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
 }
