@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const elementTop = el.getBoundingClientRect().top;
 
         return (
-            elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+            elements <= (window.innerHeight || document.documentElement.clientHeight) / dividend
         );
     };
 
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const elementTop = el.getBoundingClientRect().top;
 
         return (
-            elementTop > (window.innerHeight || document.documentElement.clientHeight)
+            elements > (window.innerHeight || document.documentElement.clientHeight)
         );
     };
 
