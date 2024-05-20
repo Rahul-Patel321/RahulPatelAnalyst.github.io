@@ -11,6 +11,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/noscript.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .image-txt-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+        .image-txt-container img {
+            max-width: 100%;
+            height: auto;
+            margin-right: 20px;
+        }
+        .image-txt-container article {
+            flex: 1;
+            min-width: 280px;
+        }
+        ul {
+            list-style-position: inside;
+            padding-left: 20px;
+        }
+        @media (max-width: 767px) {
+            .image-txt-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .image-txt-container img {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+	 
+	 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
@@ -27,17 +63,6 @@
                 }
             }, speed);
         });
-
-	/* Media queries for responsive design */
-        @media (max-width: 767px) {
-            .image-txt-container {
-                display: block;
-            }
-            .image-txt-container img,
-            .image-txt-container article {
-                width: 100%;
-            }
-        }
 	    
     </script>
 </head>
