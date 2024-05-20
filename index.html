@@ -6,22 +6,23 @@
 -->
 <html>
    <head>
-    <title id="dynamicTitle">Make The Data Shine!</title>
+    <title>Make The Data Shine!</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/noscript.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function(){
-            var titles = ["Make The Data Shine!", "Transforming Data Into Insights!"];
+        $(document).ready(function() {
+            var title = "Make The Data Shine!";
             var index = 0;
-            setInterval(function(){
-                $('#dynamicTitle').fadeOut(function(){
-                    $(this).text(titles[index]).fadeIn();
-                });
-                index = (index + 1) % titles.length;
-            }, 3000); // Change title every 3 seconds
+            var titleInterval = setInterval(function() {
+                document.title = title.substring(0, index);
+                index++;
+                if (index > title.length) {
+                    index = 0;
+                }
+            }, 150); // Typing speed in milliseconds
         });
     </script>
 </head>
